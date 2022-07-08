@@ -1,0 +1,14 @@
+version: "3"
+services:
+  apiapp:
+    image: samirshh9/apiapp-docker:latest
+    ports:
+      - "8082:8080"
+  restassured:
+    image: samirshh9/restassured-docker:latest
+    shm_size: "2gb"
+    depends_on:
+      - apiapp
+    volumes:
+      - ./Artifacts:/usr/share/automation/test-output
+      - ./Artifacts/spark.html:/usr/share/automation/spark.html
