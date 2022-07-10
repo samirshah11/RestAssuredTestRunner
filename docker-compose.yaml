@@ -11,4 +11,3 @@ services:
       - apiapp
     volumes:
       - ./Artifacts:/usr/share/automation/test-output
-      - ./Artifacts/spark.html:/usr/share/automation/spark.html
