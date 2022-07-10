@@ -7,5 +7,7 @@ services:
     shm_size: "2gb"
     depends_on:
       - apiapp
+    environment:
+      - ApiHost=apiapp
     volumes:
       - ./Artifacts:/usr/share/automation/test-output
